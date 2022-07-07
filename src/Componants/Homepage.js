@@ -2,6 +2,7 @@ import Navbar from "./Navbar"
 import React, { useState } from 'react';
 import Main from "./Main";
 import Featured_card from "./Featured_card";
+import Login from "./Login";
 
 
 
@@ -23,6 +24,8 @@ let Homepage = (props) =>{
             <Main />
 
             <Featured_card />
+
+            <Login />
         </>
     )
 
