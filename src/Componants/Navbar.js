@@ -5,7 +5,7 @@ let Navbar = (props) => {
 
     return(
         <>
-        <nav className="navbar navbar-expand-lg bg-dark">
+        <nav className="navbar sticky-top navbar-expand-lg bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/"><img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30164225/572.png" alt="logo" /></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
