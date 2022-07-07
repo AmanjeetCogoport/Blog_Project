@@ -42,5 +42,22 @@ border-radius: 50%;
 }
 
 
+#showBlogSection{
+  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
+}
+
+#mainBlogSection{
+  width: 740px;
+  /* background-color: green; */
+}
+
+#mainBlogSection h1,p{
+  padding: none;
+  margin-left: 15px;
+}
 
