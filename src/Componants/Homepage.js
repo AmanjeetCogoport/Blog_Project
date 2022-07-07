@@ -7,35 +7,30 @@ import Show_full_blog from "./Show_full_blog";
 import Text_editor from "./Text_editor";
 import Text_editor2 from "./Text_editor2";
 import RichTextEditor from "./RichTextEditor";
+import Nav from './Nav'
 
 
 
 let Homepage = (props) =>{
 
-    const [visibleItem, setVisibleItem] = useState(["visibleItem"])
-
-    // set signin signup visible
-    let setVisible = () => {
-        setVisibleItem("visible");
-    }
 
 
     return(
 
         <>
-            <Navbar signIn="Sign in" signUp="Sign Up" class={visibleItem}/>
+            <Nav />
 
             <Main />
 
             <Featured_card />
 
-            <Login />
+            {/* <Login />
 
             <Show_full_blog />
 
             <Text_editor />
             
-            <Text_editor2 />
+            <Text_editor2 /> */}
 
 
         </>

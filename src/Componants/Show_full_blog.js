@@ -1,4 +1,5 @@
-
+import Navbar from './Navbar'
+import Nav from './Nav'
 
 let Show_full_blog = (props) => {
 
@@ -7,6 +8,8 @@ let Show_full_blog = (props) => {
 
 
         <>
+            <Nav />
+
             <div className="" id="showBlogSection">
                 <div className="mt-5" id="mainBlogSection">
                 <h1 className="mb-4">Title of Blog </h1>
