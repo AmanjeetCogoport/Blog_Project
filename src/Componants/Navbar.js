@@ -24,9 +24,9 @@ let Navbar = (props) => {
               
             </ul>
 
-            <div>
-            <button className="btn btn-outline-primary mx-2" type="submit">Sign in</button>
-            <button className="btn btn-outline-info" type="submit">Sign Up</button>
+            <div className={props.class}>
+            <button className="btn btn-outline-primary mx-2" type="submit">{props.signIn}</button>
+            <button className="btn btn-outline-info" type="submit">{props.signUp}</button>
             </div>
 
             <form className="d-flex" role="search">
