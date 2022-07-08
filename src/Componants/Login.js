@@ -1,4 +1,5 @@
 import "./../login.css"
+import Nav from "./Nav";
 
 let Login = () => {
 
@@ -8,8 +9,9 @@ let Login = () => {
 
 
     <>
+
         <div className="login">
-        <div class="login-wrap">
+        <div class="login-wrap my-4">
         <div class="login-html">
             <input id="tab-1" type="radio" name="tab" class="sign-in" checked /><label for="tab-1" class="tab">Sign In</label>
             <input id="tab-2" type="radio" name="tab" class="sign-up" /><label for="tab-2" class="tab">Sign Up</label>
