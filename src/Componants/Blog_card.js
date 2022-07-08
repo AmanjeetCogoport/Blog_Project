@@ -2,6 +2,14 @@
 
 let Blog_card = (props) => {
 
+  // const [Data, setData] = 
+
+  // const getData = async () => {
+  //   setError("")
+  // }
+
+
+
 
     return(
         <>

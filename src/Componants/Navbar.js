@@ -38,20 +38,19 @@ let Navbar = (props) => {
                   Blogs
                 </Link>
               </li>
+
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/contact">
+                  Contact
+                </Link>
+              </li>
+
+
             </ul>
 
-            <div className={props.class}>
-              <Link className="btn btn-outline-primary mx-2" type="submit">
-                {props.signIn}
-              </Link>
-              <Link className="btn btn-outline-info" type="submit">
-                {props.signUp}
-              </Link>
-            </div>
-
-            <form className="d-flex" role="search">
+            {/* <form className="d-flex align-item-center justify-content-center" role="search">
               <input
-                className="form-control mx-4 me-2"
+                className="form-control mx-3 me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -59,7 +58,27 @@ let Navbar = (props) => {
               <button className="btn btn-outline-success" type="button">
                 Search
               </button>
-            </form>
+            </form> */}
+
+            <div className={props.class}>
+
+              <Link to="/signIn">
+              <button className="btn btn-outline-primary mx-2" type="submit">
+                {props.signIn}
+              </button>
+              </Link>
+
+
+
+
+              {/* <Link to="/signUp">
+              <button className="btn btn-outline-info" type="submit">
+                {props.signUp}
+              </button>
+              </Link> */}
+            </div>
+
+            
           </div>
         </div>
       </nav>

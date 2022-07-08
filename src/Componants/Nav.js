@@ -13,7 +13,7 @@ let Nav = (props) => {
 
     return (
         <>
-            <Navbar signIn="Sign in" signUp="Sign Up" class={visibleItem}/>
+            <Navbar signIn="Sign in / Sign Up" signUp="Sign Up" class={visibleItem}/>
         </>
     )
 
