@@ -45,6 +45,12 @@ let Navbar = (props) => {
                 </Link>
               </li>
 
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/Create_blog">
+                  Create_Blog
+                </Link>
+              </li>
+
 
             </ul>
 

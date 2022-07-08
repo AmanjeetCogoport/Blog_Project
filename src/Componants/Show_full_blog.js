@@ -10,6 +10,8 @@ let Show_full_blog = () => {
   const blog_id = useParams();
 
 
+
+  
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
 

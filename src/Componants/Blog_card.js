@@ -74,8 +74,22 @@ let Blog_card = (props) => {
     axios.delete(`http://127.0.0.1:3000/blogs/delete_blog/${mainid}` ).then(
      (data)  => getData()
     )
-
+    console.log(data);
   
+  }
+
+  let editBlog = (id) => {
+    let dat = JSON.stringify(id);
+    let d1 = dat.split('-');
+    let finalData = Object.values(d1).pop();
+    let lastData = finalData.slice(0,-1);
+
+    // let mainid = lastData;
+    // alert(mainid);
+
+    // work needed
+    navigate(`/edit_blog/${lastData}`)
+
   }
 
 
@@ -113,6 +127,10 @@ let Blog_card = (props) => {
    
                  <button id={`delete-btn-${d.id}`} onClick={(e) => deleteBlog(e.currentTarget.id)} className="btn mx-2 btn-danger blog_card_id">
                    Delete
+                 </button>
+
+                 <button id={`edit-btn-${d.id}`} onClick={(e) => editBlog(e.currentTarget.id)} className="btn mx-2 btn-primary blog_card_id">
+                   Edit
                  </button>
    
                  {/* <Link to={`/blog/${1}`} className="btn btn-primary blog_card_id">
