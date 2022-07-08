@@ -22,10 +22,8 @@ let Homepage = (props) =>{
 
         
         <>
-<Main />
-<Featured_card />
-
-
+        
+        <Blog_card />
         </>
     )
 

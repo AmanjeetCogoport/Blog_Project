@@ -10,7 +10,7 @@ let Featured_card = (props) => {
         </div>
 
         <div className="card-columns d-flex flex-wrap justify-content-around  container mt-4">
-                <Blog_card />
+                {/* <Blog_card /> */}
         </div>
     </>
   );

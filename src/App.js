@@ -28,8 +28,8 @@ function App() {
         <Nav />
 
           <Routes> 
-            <Route  path='/' element={<Homepage />} />
-            <Route path='/blog' element = {<Featured_card />} />
+            <Route  path='/' element={<Blog_card />} />
+            <Route path='/blog' element = {<Blog_card />} />
             <Route path='/blog/:id' element = {<Show_full_blog />} />
             <Route path='/signIn' element= {<Login />} />
             <Route path='/signUp' element={<Login />} />
