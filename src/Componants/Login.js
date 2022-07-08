@@ -9,7 +9,6 @@ let Login = () => {
 
 
     <>
-        <Nav />
 
         <div className="login">
         <div class="login-wrap my-4">

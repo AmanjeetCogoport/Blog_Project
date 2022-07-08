@@ -22,7 +22,7 @@ let Contact = (props) => {
 
     return(
         <>
-    <Nav />
+  
 
 <section id="contact">
   <div className="contact-box">

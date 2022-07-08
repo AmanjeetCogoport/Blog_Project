@@ -9,6 +9,7 @@ import Text_editor2 from "./Text_editor2";
 import RichTextEditor from "./RichTextEditor";
 import Nav from './Nav'
 import Contact from "./Contact_us/Contact";
+import Blog_card from "./Blog_card";
 
 
 
@@ -18,22 +19,11 @@ let Homepage = (props) =>{
 
     return(
 
+
+        
         <>
-            <Nav />
-
-            {/* <Main />
-
-            <Featured_card />
-
-            <Login />
-
-            <Show_full_blog />
-
-            <Text_editor />
-            
-            <Text_editor2 /> */}
-
-            <Contact />
+<Main />
+<Featured_card />
 
 
         </>

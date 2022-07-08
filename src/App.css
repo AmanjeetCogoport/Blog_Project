@@ -61,3 +61,11 @@ border-radius: 50%;
   margin-left: 15px;
 }
 
+#linkId{
+  color: blue;
+}
+
+.card-img-top{
+  height: 300px;
+  width: 286px;
+}
