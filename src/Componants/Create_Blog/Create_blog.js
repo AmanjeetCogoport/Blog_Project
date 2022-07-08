@@ -25,6 +25,8 @@ let Create_blog = (props) => {
           });
 
     }
+
+  
   
 
 
