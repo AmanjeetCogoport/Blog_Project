@@ -6,6 +6,7 @@ import './../App.css'
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Main from "./Main";
+import swal from 'sweetalert';
 
 
 
@@ -71,9 +72,15 @@ let Blog_card = (props) => {
     // alert(mainid)
     let updatedData = data.filter( (id) => id !== mainid);
 
-    axios.delete(`http://127.0.0.1:3000/blogs/delete_blog/${mainid}` ).then(
+    if(window.confirm("Are you sure?? You want to delete this blog.")){
+      axios.delete(`http://127.0.0.1:3000/blogs/delete_blog/${mainid}` ).then(
      (data)  => getData()
-    )
+      ).then( (resp) => {
+        // alert("your blog deleted Successfully..")
+      })
+    }
+
+    swal("Good Job!", "your blog deleted Successfully..", "success");
     console.log(data);
   
   }

@@ -31,9 +31,10 @@ let Create_blog = (props) => {
             .catch(function (error) {
               console.log(error);
             });
-            if(swal("Good job!", "Your Blog Published", "success")){
+          
+            swal("Good job!", "Your Blog Published", "success").then( (resp) => {
               navigate('/blog');
-            }
+            } )
             
 
         } else {
