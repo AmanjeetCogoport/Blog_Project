@@ -47,7 +47,7 @@ let Navbar = (props) => {
 
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/Create_blog">
-                  Create_Blog
+                  Create-Blog
                 </Link>
               </li>
 

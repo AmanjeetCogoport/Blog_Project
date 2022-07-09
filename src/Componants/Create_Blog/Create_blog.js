@@ -1,5 +1,7 @@
 import axios from "axios";
 import { Navigate, useNavigate } from "react-router-dom";
+import swal from 'sweetalert';
+
 
 let Create_blog = (props) => {
 
@@ -29,17 +31,22 @@ let Create_blog = (props) => {
             .catch(function (error) {
               console.log(error);
             });
-
-            navigate('/blog')
+            if(swal("Good job!", "Your Blog Published", "success")){
+              navigate('/blog');
+            }
+            
 
         } else {
-          alert("content can't be empty.");
+          // alert("content can't be empty.");
+          swal("Oops!", "Content can't be empty", "warning");
         }
       } else {
-        alert("title of your blog can't be empty.");
+        // alert("title of your blog can't be empty.");
+        swal("Oops!", "Title of your blog can't be empty.", "warning");
       }
     } else {
-      alert("author name is empty..");
+      // alert("author name is empty..");
+      swal("Oops!", "Author name is empty...", "warning");
     }
   };
 
