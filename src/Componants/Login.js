@@ -1,4 +1,4 @@
-import "./../login.css"
+import "./login.css"
 import Nav from "./Nav";
 
 let Login = () => {

@@ -1,11 +1,13 @@
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 // import axios from "axios";
 
 
 let Edit_Blog = (props) => {
+
+  let navigate = useNavigate();
 
     const blog_id = useParams();
     const [data, setData] = useState([]);
@@ -27,7 +29,7 @@ let Edit_Blog = (props) => {
       }
       const jsonData = await data1.json();
       setData(jsonData);
-      console.log(jsonData);
+      // console.log(jsonData);
 
       setAuthorName(jsonData.author_name);
       setContent(jsonData.content);
@@ -50,7 +52,7 @@ let Edit_Blog = (props) => {
 
 
     let editBlog = () => {
-        alert(authorName)
+        // alert(authorName)
         let id = blog_id;
         console.log(id.id)
 
@@ -66,7 +68,8 @@ let Edit_Blog = (props) => {
             console.log(error);
           });
 
-
+          alert("Your blog is edited successfully.")
+          navigate("/blog")
     }
   
 
@@ -113,7 +116,7 @@ let Edit_Blog = (props) => {
           
         </div>
         {/* <button className="submit-btn" >Send</button> */}
-        <input className="submit-btn" type="button" onClick={ () => editBlog()} value="Update Blog" />  
+        <input className="submit-btn" type="submit" onClick={ () => editBlog()} value="Update Blog" />  
       </form>
     </div>
   </div>

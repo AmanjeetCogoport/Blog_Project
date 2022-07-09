@@ -69,8 +69,14 @@ let Navbar = (props) => {
             <div className={props.class}>
 
               <Link to="/signIn">
+              <button className="btn btn-outline-success mx-2" type="submit">
+                Sign In
+              </button>
+              </Link>
+
+              <Link to="/signUp">
               <button className="btn btn-outline-primary mx-2" type="submit">
-                {props.signIn}
+                Sign Up
               </button>
               </Link>
 
