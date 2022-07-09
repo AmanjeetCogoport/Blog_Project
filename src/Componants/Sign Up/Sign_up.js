@@ -49,10 +49,18 @@ function passwordValidation(passwordInput) {
 let submitForm = () => {
     let currPass = document.getElementById("password").value;
     let savePass = document.getElementById("savepassword").value;
-    if(currPass == savePass){
-        swal("Good Job!", "you have successfully sign up..", "success");
+    let emailValue = document.getElementById("email").value;
+    let emailVal = emailValue.split('@');
+    
+
+    if(emailVal.length == 2 & emailVal[1].length >0){
+        if(currPass == savePass){
+            swal("Good Job!", "you have successfully sign up..", "success");
+        }else{
+            swal("Oops!", "password and confirm passward are not same.", "deger");
+        }
     }else{
-        swal("Oops!", "password and confirm passward are not same.", "deger");
+        swal("Oops!", "You Email is not correct.", "deger");
     }
 }
 

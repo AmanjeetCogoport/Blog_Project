@@ -7,7 +7,7 @@ let Sign_in = (props) => {
     return (
 
         <>
-    <div className="login-box">
+    <div className="login-box" style={{backgroundImage: ("#132649", "#286dbb")}}>
   <h2>Login</h2>
   <form>
     <div className="user-box">
