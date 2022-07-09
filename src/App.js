@@ -33,7 +33,7 @@ function App() {
 
           <Routes> 
             {/* <Route  path='/' element={<Blog_card />} /> */}
-            <Route  path='/' element={<Create_blog />} /> 
+            <Route  path='/' element={<Homepage />} /> 
             <Route path='/blog' element = {<Blog_card />} />
             <Route path='/blog/:id' element = {<Show_full_blog />} />
             {/* <Route path='/signIn' element= {<Login />} /> */}
@@ -42,7 +42,7 @@ function App() {
             <Route path='/SignUp' element={<Sign_up />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/create_blog' element={<Create_blog />} />
-            <Route path='/edit_blog/:id' element={<Edit_blog  />} />
+            <Route path='/edit-blog/:id' element={<Edit_blog  />} />
 
           </Routes>
 

@@ -22,8 +22,17 @@ let Homepage = (props) =>{
 
         
         <>
-        
-        <Blog_card />
+        {/* <Main /> */}
+        {/* <Blog_card /> */}
+        {/* <Text_editor /> */}
+        <Text_editor2 />
+        <p className="my-5"></p>
+        <h1 className="my-5"></h1>
+
+        <h2 className="my-5"></h2>
+        <h1 className="my-5"></h1>
+        <p className="my-5"></p>
+        <h1 className="my-5"></h1>
         </>
     )
 

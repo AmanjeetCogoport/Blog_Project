@@ -62,6 +62,16 @@ let Blog_card = (props) => {
 
   }
 
+  let readMoreBlog = (id) =>{
+    let data = JSON.stringify(id);
+    let d1 = data.split('-');
+    let finalData = Object.values(d1).pop();
+    let lastData = finalData.slice(0,-1);
+    
+    // alert(lastData);
+    navigate(`/blog/${lastData}`);
+  }
+
   let deleteBlog = (id) => {
     let dat = JSON.stringify(id);
     let d1 = dat.split('-');
@@ -73,7 +83,7 @@ let Blog_card = (props) => {
     let updatedData = data.filter( (id) => id !== mainid);
 
     if(window.confirm("Are you sure?? You want to delete this blog.")){
-      axios.delete(`http://127.0.0.1:3000/blogs/delete_blog/${mainid}` ).then(
+      axios.delete(`http://127.0.0.1:3000/blogs/delete-blog/${mainid}` ).then(
      (data)  => getData()
       ).then( (resp) => {
         // alert("your blog deleted Successfully..")
@@ -95,7 +105,7 @@ let Blog_card = (props) => {
     // alert(mainid);
 
     // work needed
-    navigate(`/edit_blog/${lastData}`)
+    navigate(`/edit-blog/${lastData}`)
 
   }
 
@@ -126,7 +136,7 @@ let Blog_card = (props) => {
                <div className="card-body">
                  <h5 className="card-title">{d.title}</h5>
                  
-                 <p className="card-text">{d.content} <Link id="linkId" to={`/blog/${1}`}>  {'  '} more...</Link></p>
+                 <p className="card-text" itemType="link" onClick={(e) => readMoreBlog(e.currentTarget.id)}  id={`more-btn-${d.id}`}>{d.content}   {'  '} <span style={{ 'color': "blue", 'backgroundColor': "transparent" }}>more...</span></p>
    
                  <button onClick={(e) => readBlog(e.currentTarget.id)} id={`read-btn-${d.id}`} className="btn mx-2 btn-success blog_card_id">
                    Read

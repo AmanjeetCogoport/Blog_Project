@@ -85,7 +85,7 @@ let Edit_Blog = (props) => {
 
           swal("Good job!", "Your Blog Edited Success Fully", "success").then(
             (resp) => {
-              navigate("blog");
+              console.log("working fine");
             }
           );
         } else {
@@ -100,6 +100,8 @@ let Edit_Blog = (props) => {
       // alert("author name is empty..");
       swal("Oops!", "Author name is empty...", "warning");
     }
+
+    navigate("/blog");
   };
 
   return (

@@ -54,6 +54,10 @@ let Text_editor2 = (props) => {
           Publish Your Blog
         </button>
       </div>
+
+      <div className="container my-5">
+          {value}
+      </div>
     </>
   );
 };
