@@ -2,10 +2,12 @@ import Nav from '../Nav';
 import './contact.css';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import swal from 'sweetalert';
+import { useNavigate } from "react-router-dom";
 
 
 let Contact = (props) => {
-
+  const navigate = useNavigate();
     const form = useRef();
 
   const sendEmail = (e) => {
@@ -17,6 +19,9 @@ let Contact = (props) => {
       }, (error) => {
           console.log(error.text);
       });
+
+      swal("Good Job!", "Massage sent..", "success");
+      navigate('/blog');
   };
 
 

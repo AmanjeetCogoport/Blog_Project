@@ -33,7 +33,8 @@ function App() {
 
           <Routes> 
             {/* <Route  path='/' element={<Blog_card />} /> */}
-            <Route  path='/' element={<Homepage />} /> 
+            <Route  path='/' element={<Sign_up />} /> 
+            <Route path='/homepage' element={<Homepage />} />
             <Route path='/blog' element = {<Blog_card />} />
             <Route path='/blog/:id' element = {<Show_full_blog />} />
             {/* <Route path='/signIn' element= {<Login />} /> */}

@@ -1,7 +1,58 @@
 import './sign_up.css';
 import swal from 'sweetalert';
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 let Sign_up = (props) => {
+
+    // const navigate = useNavigate();
+
+
+    const [user_email, setUseremail] = useState('');
+    const [user_name, setUsername] = useState('');
+    const [user_password, setUserpassword] = useState('');
+    const navigate = useNavigate();
+
+
+    let signup=()=>{
+
+        let currPass = document.getElementById("password").value;
+        let savePass = document.getElementById("savepassword").value;
+        let emailValue = document.getElementById("email").value;
+        let emailVal = emailValue.split('@');
+
+        if(user_email !== "" && user_password !== '' && user_name !== ""){
+            axios.post("http://127.0.0.1:3000/users/create_user",{
+                email: user_email,
+                passward: user_password,
+                name: user_name
+            } ).then(()=>{
+                swal("Good Job!", "you have successfully sign up..", "success");
+            // navigate("/");
+
+        })
+        }else {
+            // alert("all fields are required")
+            swal("Oops!", "You Email is not correct.", "deger");
+        }
+
+        // if(emailVal.length == 2 & emailVal[1].length >0){
+        //     if(currPass == savePass){
+        //         swal("Good Job!", "you have successfully sign up..", "success");
+        //     }else{
+        //         swal("Oops!", "password and confirm passward are not same.", "deger");
+        //     }
+        // }else{
+        //     swal("Oops!", "You Email is not correct.", "deger");
+        // }
+
+        navigate("/SignIn")
+        
+    }
+    // navigate("/SignIn")
+
+
 
 var alertRedInput = "#8C1010";
 var defaultInput = "rgba(10, 180, 180, 1)";
@@ -46,23 +97,23 @@ function passwordValidation(passwordInput) {
 
 }
 
-let submitForm = () => {
-    let currPass = document.getElementById("password").value;
-    let savePass = document.getElementById("savepassword").value;
-    let emailValue = document.getElementById("email").value;
-    let emailVal = emailValue.split('@');
+// let submitForm = () => {
+//     let currPass = document.getElementById("password").value;
+//     let savePass = document.getElementById("savepassword").value;
+//     let emailValue = document.getElementById("email").value;
+//     let emailVal = emailValue.split('@');
     
 
-    if(emailVal.length == 2 & emailVal[1].length >0){
-        if(currPass == savePass){
-            swal("Good Job!", "you have successfully sign up..", "success");
-        }else{
-            swal("Oops!", "password and confirm passward are not same.", "deger");
-        }
-    }else{
-        swal("Oops!", "You Email is not correct.", "deger");
-    }
-}
+//     if(emailVal.length == 2 & emailVal[1].length >0){
+//         if(currPass == savePass){
+//             swal("Good Job!", "you have successfully sign up..", "success");
+//         }else{
+//             swal("Oops!", "password and confirm passward are not same.", "deger");
+//         }
+//     }else{
+//         swal("Oops!", "You Email is not correct.", "deger");
+//     }
+// }
 
 
     return (
@@ -80,23 +131,25 @@ let submitForm = () => {
     <ul className="noBullet">
      <li>
         <label for="email"></label>
-        <input type="email" className="inputFields" id="email" name="email" placeholder="Email"  required/>
+        <input type="email" onChange={(e) => setUseremail(e.target.value)}  className="inputFields" id="email" name="email" placeholder="Email"  required/>
       </li>
       <li>
+
         <label for="username"></label>
-        <input type="text" className="inputFields" id="username" name="username" placeholder="Your name" oninput="return userNameValidation(this.value)" required/>
+        <input type="text" className="inputFields" id="username" name="username" placeholder="User name" onChange={(e) => setUsername(e.target.value)} onInput="return userNameValidation(this.value)" required/>
       </li>
       <li>
         <label for="password"></label>
-        <input type="password" className="inputFields" id="password" name="password" placeholder="Password" oninput="return passwordValidation(this.value)" required/>
+        <input type="password" className="inputFields" id="password" name="password" placeholder="Password" onInput="return passwordValidation(this.value)" required/>
       </li>
       <li>
         <label for="password"></label>
-        <input type="password" className="inputFields" id="savepassword" name="password" placeholder="Confirm Passward" oninput="return passwordValidation(this.value)" required/>
+        <input type="password" onChange={(e) => setUserpassword(e.target.value)} className="inputFields" id="savepassword" name="password" placeholder="Confirm Passward" onInput="return passwordValidation(this.value)" required/>
       </li>
       
       <li id="center-btn">
-        <input type="submit" onClick = {() => submitForm()} id="join-btn" name="join" alt="Join" value="Join" />
+      {/* onClick = {() => submitForm()} */}
+        <input type="submit" onClick={() => signup()}  id="join-btn" name="join" alt="Join" value="Sign Up" />
       </li>
     </ul>
   </form>

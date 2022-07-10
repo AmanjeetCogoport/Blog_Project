@@ -101,6 +101,10 @@ let Edit_Blog = (props) => {
       swal("Oops!", "Author name is empty...", "warning");
     }
 
+
+
+    
+
     navigate("/blog");
   };
 

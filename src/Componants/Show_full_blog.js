@@ -49,8 +49,8 @@ let Show_full_blog = () => {
 
       <div className="" id="showBlogSection">
         <div className="mt-5" id="mainBlogSection">
-          <h1 className="mb-4">{data.title}</h1>
-          <p className="mb-4">{data.author_name}</p>
+          <h1 className="mb-4">Title : {data.title}</h1>
+          <p className="mb-4">Author Name : {data.author_name}</p>
           <div className="container">
             <img id="imginFullBlog"
               src="https://blog.logrocket.com/wp-content/uploads/2022/06/build-task-tracker-with-solidjs-typescript-nocdn.png"
